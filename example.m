@@ -86,22 +86,25 @@ PStat = reshape(Vl(:,1), n,n)';
 
 h = figure;
 
-subplot(2,2,1); 
-imagesc(A);
-colorbar;
+%subplot(2,2,1); 
+%imagesc(A);
+%colorbar;
 
-subplot(2,2,2);
+%subplot(2,2,2);
 imagesc(reshape(Cinit, n, n)');
 colorbar;
+print(h, '-dpdf', 'A.pdf')
 
-subplot(2,2,3);
-imagesc(PrefStat);
-colorbar;
+%subplot(2,2,3);
+%imagesc(PrefStat);
+%colorbar;
 
-subplot(2,2,4);
+j = figure;
+%subplot(2,2,4);
 imagesc(abs(PStat));
 colorbar;
 
+print(j, '-dpdf', 'B.pdf');
 
 
 
