@@ -10,8 +10,13 @@ A = ones(n,n);
 %        4,5,6];
 
 %1 Matrix 1 (Gaussian obstacle)
-Cinit = gauss2d(A, 3, [15,15]);
-Cinit = reshape(Cinit.*5', 1,n*n);
+%Cinit = gauss2d(A, 3, [15,15]);
+%Cinit = reshape(Cinit.*5', 1,n*n);
+
+Cinit = ones(n);
+Cinit = Cinit(1:20, 10);
+Cinit - Cinit(10:30, 20);
+Cinit = reshape(Cinit', 1,n*n);
 
 %Cinit = [1,  1,  1,  1,  1,  1,  1,  1,  1 
 %      1,  1,  1,  1,  1,  1,  1,  1,  1
