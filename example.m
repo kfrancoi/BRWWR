@@ -1,4 +1,4 @@
-function example
+function example()
 %Launch BRWWR on a small example 
 
 n = 30;
@@ -14,8 +14,8 @@ A = ones(n,n);
 %Cinit = reshape(Cinit.*5', 1,n*n);
 
 Cinit = ones(n);
-Cinit = Cinit(1:20, 10);
-Cinit - Cinit(10:30, 20);
+Cinit(1:20, 10) = 5;
+Cinit(10:30, 20) = 5;
 Cinit = reshape(Cinit', 1,n*n);
 
 %Cinit = [1,  1,  1,  1,  1,  1,  1,  1,  1 
@@ -105,6 +105,5 @@ imagesc(abs(PStat));
 colorbar;
 
 print(j, '-dpdf', 'B.pdf');
-
 
 
